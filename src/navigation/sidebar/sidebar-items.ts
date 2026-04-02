@@ -70,9 +70,18 @@ export const sidebarItems: NavGroup[] = [
       },
       {
         title: "E-commerce",
-        url: "/dashboard/coming-soon",
+        url: "/dashboard/e-commerce",
         icon: ShoppingBag,
-        comingSoon: true,
+        subItems: [
+          {
+            title: "Product Center",
+            url: "/dashboard/e-commerce/products",
+          },
+          {
+            title: "Publication Workbench",
+            url: "/dashboard/e-commerce/publications",
+          },
+        ],
       },
       {
         title: "Academy",
