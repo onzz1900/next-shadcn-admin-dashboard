@@ -52,8 +52,8 @@ export const publicationWorkbenchTableColumns: ColumnDef<PublicationWorkbenchTab
     cell: ({ row }) => (
       <Button asChild variant="ghost" size="sm" className="h-8 px-2">
         <Link
-          href={`/dashboard/e-commerce/products/${row.original.productId}`}
-          aria-label={`去处理 ${row.original.productName}`}
+          href={`/dashboard/e-commerce/products/${row.original.productId}?channel=${row.original.channel}`}
+          aria-label={`去处理 ${row.original.productName}（${channelLabels[row.original.channel]}）`}
         >
           去处理
         </Link>

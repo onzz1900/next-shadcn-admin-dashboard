@@ -18,6 +18,7 @@ import { getChannelPrimaryAction } from "./publication-actions";
 
 interface ChannelPublicationTabsProps {
   product: SPUDetail;
+  initialChannel?: ChannelId;
 }
 
 const channelLabel: Record<ChannelId, string> = {
@@ -120,8 +121,12 @@ function ChannelFieldsSection({ channel }: { channel: ChannelPublicationView }) 
   );
 }
 
-export function ChannelPublicationTabs({ product }: ChannelPublicationTabsProps) {
+export function ChannelPublicationTabs({ product, initialChannel }: ChannelPublicationTabsProps) {
   const channels = Object.values(product.channels);
+  const defaultChannel =
+    initialChannel && channels.some((channel) => channel.channel === initialChannel)
+      ? initialChannel
+      : channels[0]?.channel;
 
   return (
     <Card>
@@ -130,7 +135,7 @@ export function ChannelPublicationTabs({ product }: ChannelPublicationTabsProps)
         <CardDescription>查看各渠道审核、上架与字段准备状态。</CardDescription>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue={channels[0]?.channel} className="gap-4">
+        <Tabs key={defaultChannel} defaultValue={defaultChannel} className="gap-4">
           <TabsList variant="line">
             {channels.map((channel) => (
               <TabsTrigger key={channel.channel} value={channel.channel} className="gap-2">

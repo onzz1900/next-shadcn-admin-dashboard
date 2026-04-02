@@ -46,8 +46,9 @@ describe("productCenter selectors", () => {
   it("flattens actionable publication rows for the workbench", () => {
     const rows = getPublicationWorkbenchRows(productCenterMock);
 
-    expect(rows).toHaveLength(4);
+    expect(rows).toHaveLength(6);
     expect(rows[0].channel).toBe("douyin");
     expect(rows.some((row) => row.publicationStatus === "ready_to_list")).toBe(true);
+    expect(rows.some((row) => row.productId === "spu-coffee-trial" && row.channel === "wechat")).toBe(true);
   });
 });

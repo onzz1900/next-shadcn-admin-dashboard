@@ -2,12 +2,18 @@ import type {
   ChannelPublicationView,
   ProductCenterFilters,
   ProductCenterMetrics,
+  PublicationStatus,
   PublicationWorkbenchRow,
   SPUDetail,
   SPUSummary,
 } from "./product-center.types";
 
-const PUBLICATION_PRIORITY: Record<"in_review" | "sync_error" | "ready_to_list" | "missing_fields", number> = {
+const ACTIONABLE_PUBLICATION_STATUSES = ["in_review", "sync_error", "ready_to_list", "missing_fields"] as const;
+const ACTIONABLE_PUBLICATION_STATUS_SET = new Set<PublicationStatus>(ACTIONABLE_PUBLICATION_STATUSES);
+
+type WorkbenchPublicationStatus = (typeof ACTIONABLE_PUBLICATION_STATUSES)[number];
+
+const PUBLICATION_PRIORITY: Record<WorkbenchPublicationStatus, number> = {
   in_review: 0,
   sync_error: 1,
   ready_to_list: 2,
@@ -39,16 +45,9 @@ function getChannelViews(product: SPUDetail): Array<ChannelPublicationView> {
 }
 
 function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbenchRow> {
-  const rankedChannels = getChannelViews(product).filter((channel) =>
-    ["in_review", "sync_error", "ready_to_list", "missing_fields"].includes(channel.publicationStatus),
-  );
-
-  const urgentChannels = rankedChannels.filter(
-    (channel) => channel.publicationStatus === "in_review" || channel.publicationStatus === "sync_error",
-  );
-
-  if (urgentChannels.length > 0) {
-    return urgentChannels.map((channel) => ({
+  return getChannelViews(product)
+    .filter((channel) => ACTIONABLE_PUBLICATION_STATUS_SET.has(channel.publicationStatus))
+    .map((channel) => ({
       productId: product.id,
       productName: product.name,
       channel: channel.channel,
@@ -57,26 +56,10 @@ function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbench
       blocker: channel.missingFields[0] ?? channel.rejectionReason ?? "等待渠道处理",
       updatedAt: channel.lastSyncAt,
     }));
-  }
+}
 
-  const readyToListChannel = rankedChannels.find((channel) => channel.publicationStatus === "ready_to_list");
-  const fallbackChannel = readyToListChannel ?? rankedChannels[0];
-
-  if (!fallbackChannel) {
-    return [];
-  }
-
-  return [
-    {
-      productId: product.id,
-      productName: product.name,
-      channel: fallbackChannel.channel,
-      publicationStatus: fallbackChannel.publicationStatus,
-      auditStatus: fallbackChannel.auditStatus,
-      blocker: fallbackChannel.missingFields[0] ?? fallbackChannel.rejectionReason ?? "等待渠道处理",
-      updatedAt: fallbackChannel.lastSyncAt,
-    },
-  ];
+function buildWorkBenchPriority(status: PublicationStatus): number {
+  return PUBLICATION_PRIORITY[status as WorkbenchPublicationStatus] ?? 4;
 }
 
 export function getProductCenterMetrics(products: SPUDetail[]): ProductCenterMetrics {
@@ -126,8 +109,8 @@ export function getPublicationWorkbenchRows(products: SPUDetail[]): PublicationW
   return products
     .flatMap((product) => selectWorkbenchChannels(product))
     .sort((left, right) => {
-      const leftPriority = PUBLICATION_PRIORITY[left.publicationStatus as keyof typeof PUBLICATION_PRIORITY] ?? 3;
-      const rightPriority = PUBLICATION_PRIORITY[right.publicationStatus as keyof typeof PUBLICATION_PRIORITY] ?? 3;
+      const leftPriority = buildWorkBenchPriority(left.publicationStatus);
+      const rightPriority = buildWorkBenchPriority(right.publicationStatus);
 
       if (leftPriority !== rightPriority) {
         return leftPriority - rightPriority;
