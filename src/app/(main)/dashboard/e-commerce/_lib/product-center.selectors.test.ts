@@ -44,7 +44,10 @@ describe("productCenter selectors", () => {
   });
 
   it("flattens actionable publication rows for the workbench", () => {
-    expect(getPublicationWorkbenchRows(productCenterMock)).toHaveLength(4);
-    expect(getPublicationWorkbenchRows(productCenterMock)[0].channel).toBe("douyin");
+    const rows = getPublicationWorkbenchRows(productCenterMock);
+
+    expect(rows).toHaveLength(4);
+    expect(rows[0].channel).toBe("douyin");
+    expect(rows.some((row) => row.publicationStatus === "ready_to_list")).toBe(true);
   });
 });

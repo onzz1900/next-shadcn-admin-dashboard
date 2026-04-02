@@ -7,10 +7,11 @@ import type {
   SPUSummary,
 } from "./product-center.types";
 
-const PUBLICATION_PRIORITY: Record<"in_review" | "sync_error" | "missing_fields", number> = {
+const PUBLICATION_PRIORITY: Record<"in_review" | "sync_error" | "ready_to_list" | "missing_fields", number> = {
   in_review: 0,
   sync_error: 1,
-  missing_fields: 2,
+  ready_to_list: 2,
+  missing_fields: 3,
 };
 
 function summarizeProduct(product: SPUDetail): SPUSummary {
@@ -39,7 +40,7 @@ function getChannelViews(product: SPUDetail): Array<ChannelPublicationView> {
 
 function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbenchRow> {
   const rankedChannels = getChannelViews(product).filter((channel) =>
-    ["in_review", "sync_error", "missing_fields"].includes(channel.publicationStatus),
+    ["in_review", "sync_error", "ready_to_list", "missing_fields"].includes(channel.publicationStatus),
   );
 
   const urgentChannels = rankedChannels.filter(
@@ -58,7 +59,8 @@ function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbench
     }));
   }
 
-  const fallbackChannel = rankedChannels[0];
+  const readyToListChannel = rankedChannels.find((channel) => channel.publicationStatus === "ready_to_list");
+  const fallbackChannel = readyToListChannel ?? rankedChannels[0];
 
   if (!fallbackChannel) {
     return [];
