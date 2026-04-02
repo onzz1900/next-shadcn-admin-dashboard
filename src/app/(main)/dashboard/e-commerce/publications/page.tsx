@@ -1,17 +1,15 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { productCenterMock } from "../_lib/product-center.mock";
+import { getPublicationWorkbenchRows } from "../_lib/product-center.selectors";
+import { WorkbenchOverviewCards } from "./_components/workbench-overview-cards";
+import { PublicationWorkbenchTable } from "./_components/workbench-table/table";
 
 export default function Page() {
+  const rows = getPublicationWorkbenchRows(productCenterMock);
+
   return (
     <div className="@container/main flex flex-col gap-4 md:gap-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>Publication Workbench</CardTitle>
-          <CardDescription>Prepare, review, and publish omni-channel content with a focused workspace.</CardDescription>
-        </CardHeader>
-        <CardContent className="text-sm text-muted-foreground">
-          This route is ready for publication workflow tooling to be added next.
-        </CardContent>
-      </Card>
+      <WorkbenchOverviewCards rows={rows} />
+      <PublicationWorkbenchTable rows={rows} />
     </div>
   );
 }
