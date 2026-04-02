@@ -23,7 +23,7 @@ export default async function Page({ params }: ProductDetailPageProps) {
   return (
     <div className="@container/main flex flex-col gap-4 md:gap-6">
       <DetailHeader product={product} />
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,2fr)_minmax(320px,1fr)] md:gap-6">
+      <div className="grid gap-4 md:gap-6 xl:grid-cols-[minmax(0,2fr)_minmax(320px,1fr)]">
         <div className="flex min-w-0 flex-col gap-4 md:gap-6">
           <BasicInfoCard product={product} />
           <ChannelPublicationTabs product={product} />

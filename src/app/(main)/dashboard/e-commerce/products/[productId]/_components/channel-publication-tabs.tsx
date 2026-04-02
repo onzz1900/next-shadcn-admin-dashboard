@@ -14,6 +14,7 @@ import type {
   ListingStatus,
   SPUDetail,
 } from "../../../_lib/product-center.types";
+import { getChannelPrimaryAction } from "./publication-actions";
 
 interface ChannelPublicationTabsProps {
   product: SPUDetail;
@@ -49,39 +50,19 @@ function getFieldBadgeVariant(state: ChannelFieldState["state"]) {
   return "outline";
 }
 
-function getPrimaryAction(channel: ChannelPublicationView) {
-  if (channel.publicationStatus === "missing_fields" || channel.publicationStatus === "sync_error") {
-    return "更新渠道";
-  }
-
-  if (channel.auditStatus === "not_submitted" || channel.auditStatus === "rejected") {
-    return "提交审核";
-  }
-
-  if (channel.auditStatus === "approved" && channel.listingStatus !== "listed") {
-    return "上架";
-  }
-
-  if (channel.listingStatus === "listed") {
-    return "下架";
-  }
-
-  return "更新渠道";
-}
-
 function StatusGrid({ channel }: { channel: ChannelPublicationView }) {
   return (
     <div className="grid gap-3 sm:grid-cols-3">
       <div className="rounded-lg border px-4 py-3">
-        <div className="text-muted-foreground mb-2 text-xs">发布状态</div>
+        <div className="mb-2 text-muted-foreground text-xs">发布状态</div>
         <ChannelStatusBadge status={channel.publicationStatus} />
       </div>
       <div className="rounded-lg border px-4 py-3">
-        <div className="text-muted-foreground mb-2 text-xs">审核状态</div>
+        <div className="mb-2 text-muted-foreground text-xs">审核状态</div>
         <div className="font-medium text-sm">{auditStatusLabel[channel.auditStatus]}</div>
       </div>
       <div className="rounded-lg border px-4 py-3">
-        <div className="text-muted-foreground mb-2 text-xs">上下架状态</div>
+        <div className="mb-2 text-muted-foreground text-xs">上下架状态</div>
         <div className="font-medium text-sm">{listingStatusLabel[channel.listingStatus]}</div>
       </div>
     </div>
@@ -160,25 +141,34 @@ export function ChannelPublicationTabs({ product }: ChannelPublicationTabsProps)
           </TabsList>
           {channels.map((channel) => (
             <TabsContent key={channel.channel} value={channel.channel} className="space-y-4">
-              <StatusGrid channel={channel} />
-              <MissingFieldsSection channel={channel} />
-              <ChannelFieldsSection channel={channel} />
-              {channel.rejectionReason ? (
-                <div className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-4">
-                  <div className="font-medium text-destructive text-sm">驳回 / 异常原因</div>
-                  <p className="mt-2 text-sm">{channel.rejectionReason}</p>
-                </div>
-              ) : null}
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border px-4 py-4">
-                <div className="space-y-1">
-                  <div className="font-medium text-sm">{channelLabel[channel.channel]}操作</div>
-                  <div className="text-muted-foreground text-xs">最近同步时间：{channel.lastSyncAt}</div>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Button variant="outline">更新渠道</Button>
-                  <Button>{getPrimaryAction(channel)}</Button>
-                </div>
-              </div>
+              {(() => {
+                const primaryAction = getChannelPrimaryAction(channel);
+                const showUpdateAction = primaryAction !== "更新渠道";
+
+                return (
+                  <>
+                    <StatusGrid channel={channel} />
+                    <MissingFieldsSection channel={channel} />
+                    <ChannelFieldsSection channel={channel} />
+                    {channel.rejectionReason ? (
+                      <div className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-4">
+                        <div className="font-medium text-destructive text-sm">驳回 / 异常原因</div>
+                        <p className="mt-2 text-sm">{channel.rejectionReason}</p>
+                      </div>
+                    ) : null}
+                    <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border px-4 py-4">
+                      <div className="space-y-1">
+                        <div className="font-medium text-sm">{channelLabel[channel.channel]}操作</div>
+                        <div className="text-muted-foreground text-xs">最近同步时间：{channel.lastSyncAt}</div>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {showUpdateAction ? <Button variant="outline">更新渠道</Button> : null}
+                        <Button>{primaryAction}</Button>
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
             </TabsContent>
           ))}
         </Tabs>

@@ -3,20 +3,23 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 import type { SPUDetail } from "../../../_lib/product-center.types";
+import { getHeaderActions } from "./publication-actions";
 
 interface DetailHeaderProps {
   product: SPUDetail;
 }
 
 export function DetailHeader({ product }: DetailHeaderProps) {
+  const actions = getHeaderActions(product);
+
   return (
     <section className="rounded-xl border bg-card p-6 shadow-xs">
       <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
         <div className="space-y-4">
           <div className="space-y-2">
-            <div className="text-muted-foreground text-xs tracking-[0.18em] uppercase">{product.spuCode}</div>
+            <div className="text-muted-foreground text-xs uppercase tracking-[0.18em]">{product.spuCode}</div>
             <div className="space-y-2">
-              <h1 className="text-2xl font-semibold tracking-tight">{product.name}</h1>
+              <h1 className="font-semibold text-2xl tracking-tight">{product.name}</h1>
               <div className="flex flex-wrap gap-2">
                 {product.tags.map((tag) => (
                   <Badge key={tag} variant="outline">
@@ -35,8 +38,11 @@ export function DetailHeader({ product }: DetailHeaderProps) {
           </div>
         </div>
         <div className="flex flex-wrap gap-2 xl:justify-end">
-          <Button variant="outline">更新渠道</Button>
-          <Button>提交审核</Button>
+          {actions.map((action, index) => (
+            <Button key={action} variant={index === 0 && actions.length > 1 ? "outline" : "default"}>
+              {action}
+            </Button>
+          ))}
         </div>
       </div>
     </section>
