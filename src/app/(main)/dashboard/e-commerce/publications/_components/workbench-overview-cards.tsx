@@ -27,11 +27,16 @@ const overviewCards = [
     title: "待上架",
     description: "内容已齐，等待发布",
   },
+  {
+    key: "rejected",
+    title: "已驳回",
+    description: "渠道驳回后等待重新处理",
+  },
 ] as const;
 
 export function WorkbenchOverviewCards({ rows }: WorkbenchOverviewCardsProps) {
   return (
-    <div className="grid grid-cols-1 gap-4 *:data-[slot=card]:shadow-xs sm:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 *:data-[slot=card]:shadow-xs sm:grid-cols-2 xl:grid-cols-5">
       {overviewCards.map((card) => {
         const count = rows.filter((row) => row.publicationStatus === card.key).length;
 
