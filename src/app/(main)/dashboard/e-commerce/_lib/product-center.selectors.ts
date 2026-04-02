@@ -1,4 +1,5 @@
 import type {
+  ChannelPublicationView,
   ProductCenterFilters,
   ProductCenterMetrics,
   PublicationWorkbenchRow,
@@ -6,7 +7,6 @@ import type {
   SPUSummary,
 } from "./product-center.types";
 
-const CHANNEL_ORDER = ["douyin", "wechat"] as const;
 const PUBLICATION_PRIORITY: Record<"in_review" | "sync_error" | "missing_fields", number> = {
   in_review: 0,
   sync_error: 1,
@@ -33,8 +33,12 @@ function matchesPublicationState(status: string, filter: ProductCenterFilters["c
   return filter === "all" || status === filter;
 }
 
+function getChannelViews(product: SPUDetail): Array<ChannelPublicationView> {
+  return Object.values(product.channels);
+}
+
 function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbenchRow> {
-  const rankedChannels = CHANNEL_ORDER.map((channel) => product.channels[channel]).filter((channel) =>
+  const rankedChannels = getChannelViews(product).filter((channel) =>
     ["in_review", "sync_error", "missing_fields"].includes(channel.publicationStatus),
   );
 
@@ -101,7 +105,7 @@ export function filterProductSummaries(products: SPUDetail[], filters: ProductCe
         item.category.toLowerCase().includes(keyword);
 
       const matchesProductStatus = filters.productStatus === "all" || item.productStatus === filters.productStatus;
-      const channelViews = filters.channel === "all" ? Object.values(item.channels) : [item.channels[filters.channel]];
+      const channelViews = filters.channel === "all" ? getChannelViews(item) : [item.channels[filters.channel]];
       const matchesChannel = filters.channel === "all" || channelViews[0].publicationStatus !== "not_started";
       const matchesChannelState =
         filters.channelState === "all" ||

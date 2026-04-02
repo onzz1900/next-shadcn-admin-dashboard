@@ -18,8 +18,8 @@ export interface ChannelFieldState {
   state: "ready" | "missing" | "warning";
 }
 
-export interface ChannelPublicationView {
-  channel: ChannelId;
+export interface ChannelPublicationView<TChannel extends ChannelId = ChannelId> {
+  channel: TChannel;
   publicationStatus: PublicationStatus;
   auditStatus: AuditStatus;
   listingStatus: ListingStatus;
@@ -28,6 +28,10 @@ export interface ChannelPublicationView {
   lastSyncAt: string;
   channelSpecificFields: ChannelFieldState[];
 }
+
+export type ChannelMap = {
+  [K in ChannelId]: ChannelPublicationView<K>;
+};
 
 export interface SKUItem {
   id: string;
@@ -55,7 +59,7 @@ export interface SPUSummary {
   completionPercent: number;
   productStatus: ProductStatus;
   updatedAt: string;
-  channels: Record<ChannelId, ChannelPublicationView>;
+  channels: ChannelMap;
 }
 
 export interface SPUDetail extends SPUSummary {
