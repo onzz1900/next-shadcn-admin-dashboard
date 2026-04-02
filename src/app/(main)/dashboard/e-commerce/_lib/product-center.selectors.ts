@@ -8,7 +8,13 @@ import type {
   SPUSummary,
 } from "./product-center.types";
 
-const ACTIONABLE_PUBLICATION_STATUSES = ["in_review", "sync_error", "ready_to_list", "missing_fields"] as const;
+const ACTIONABLE_PUBLICATION_STATUSES = [
+  "in_review",
+  "sync_error",
+  "ready_to_list",
+  "missing_fields",
+  "rejected",
+] as const;
 const ACTIONABLE_PUBLICATION_STATUS_SET = new Set<PublicationStatus>(ACTIONABLE_PUBLICATION_STATUSES);
 
 type WorkbenchPublicationStatus = (typeof ACTIONABLE_PUBLICATION_STATUSES)[number];
@@ -18,6 +24,7 @@ const PUBLICATION_PRIORITY: Record<WorkbenchPublicationStatus, number> = {
   sync_error: 1,
   ready_to_list: 2,
   missing_fields: 3,
+  rejected: 4,
 };
 
 function summarizeProduct(product: SPUDetail): SPUSummary {
@@ -91,12 +98,11 @@ export function filterProductSummaries(products: SPUDetail[], filters: ProductCe
 
       const matchesProductStatus = filters.productStatus === "all" || item.productStatus === filters.productStatus;
       const channelViews = filters.channel === "all" ? getChannelViews(item) : [item.channels[filters.channel]];
-      const matchesChannel = filters.channel === "all" || channelViews[0].publicationStatus !== "not_started";
       const matchesChannelState =
         filters.channelState === "all" ||
         channelViews.some((channel) => matchesPublicationState(channel.publicationStatus, filters.channelState));
 
-      return matchesKeyword && matchesProductStatus && matchesChannel && matchesChannelState;
+      return matchesKeyword && matchesProductStatus && matchesChannelState;
     })
     .map(summarizeProduct);
 }

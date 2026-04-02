@@ -23,7 +23,7 @@ const productStatusOptions: Array<{ value: ProductCenterFilters["productStatus"]
 const channelOptions: Array<{ value: ProductCenterFilters["channel"]; label: string }> = [
   { value: "all", label: "全部渠道" },
   { value: "douyin", label: "抖音" },
-  { value: "wechat", label: "微信" },
+  { value: "wechat", label: "视频号" },
 ];
 
 const channelStateOptions: Array<{ value: ProductCenterFilters["channelState"]; label: string }> = [
