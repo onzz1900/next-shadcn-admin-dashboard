@@ -2,12 +2,11 @@
 
 import * as React from "react";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 import { filterProductSummaries, getProductCenterMetrics } from "../../_lib/product-center.selectors";
 import type { ProductCenterFilters, SPUDetail } from "../../_lib/product-center.types";
 import { ProductCenterFiltersBar } from "./filters";
 import { ProductCenterOverviewCards } from "./overview-cards";
+import { ProductCenterTable } from "./product-table/table";
 
 interface ProductCenterPageProps {
   products: SPUDetail[];
@@ -34,15 +33,7 @@ export function ProductCenterPage({ products }: ProductCenterPageProps) {
     <div className="@container/main flex flex-col gap-4 md:gap-6">
       <ProductCenterOverviewCards metrics={metrics} />
       <ProductCenterFiltersBar filters={filters} onFiltersChange={setFilters} />
-      <Card>
-        <CardHeader>
-          <CardTitle>商品列表</CardTitle>
-          <CardDescription>Task 4 将在这里接入列表表格。</CardDescription>
-        </CardHeader>
-        <CardContent className="text-sm text-muted-foreground">
-          当前筛选结果共 <span className="font-medium text-foreground">{filteredProducts.length}</span> 个商品。
-        </CardContent>
-      </Card>
+      <ProductCenterTable data={filteredProducts} />
     </div>
   );
 }
