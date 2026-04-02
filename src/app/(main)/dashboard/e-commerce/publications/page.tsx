@@ -2,8 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function Page() {
   return (
-    <div className="@container/main flex min-h-[calc(100vh-8rem)] items-center justify-center p-4 md:p-6">
-      <Card className="w-full max-w-2xl">
+    <div className="@container/main flex flex-col gap-4 md:gap-6">
+      <Card>
         <CardHeader>
           <CardTitle>Publication Workbench</CardTitle>
           <CardDescription>Prepare, review, and publish omni-channel content with a focused workspace.</CardDescription>
