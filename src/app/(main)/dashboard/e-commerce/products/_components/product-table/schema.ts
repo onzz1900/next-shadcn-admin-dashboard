@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import type { ChannelPublicationView, SPUSummary } from "../../../_lib/product-center.types";
+
 const publicationStatusSchema = z.enum([
   "not_started",
   "missing_fields",
@@ -11,24 +13,8 @@ const publicationStatusSchema = z.enum([
   "sync_error",
 ]);
 
-const auditStatusSchema = z.enum(["not_submitted", "pending", "approved", "rejected"]);
-const listingStatusSchema = z.enum(["not_listed", "listed", "delisted"]);
-
-const channelFieldStateSchema = z.object({
-  label: z.string(),
-  value: z.string(),
-  state: z.enum(["ready", "missing", "warning"]),
-});
-
-const channelPublicationViewSchema = z.object({
-  channel: z.enum(["douyin", "wechat"]),
+const productCenterTableChannelSchema = z.object({
   publicationStatus: publicationStatusSchema,
-  auditStatus: auditStatusSchema,
-  listingStatus: listingStatusSchema,
-  missingFields: z.array(z.string()),
-  rejectionReason: z.string().optional(),
-  lastSyncAt: z.string(),
-  channelSpecificFields: z.array(channelFieldStateSchema),
 });
 
 export const productCenterTableSchema = z.object({
@@ -36,16 +22,21 @@ export const productCenterTableSchema = z.object({
   spuCode: z.string(),
   name: z.string(),
   category: z.string(),
-  brand: z.string(),
-  shop: z.string(),
   skuCount: z.number(),
   completionPercent: z.number(),
-  productStatus: z.enum(["draft", "ready", "archived"]),
   updatedAt: z.string(),
   channels: z.object({
-    douyin: channelPublicationViewSchema,
-    wechat: channelPublicationViewSchema,
+    douyin: productCenterTableChannelSchema,
+    wechat: productCenterTableChannelSchema,
   }),
 });
 
-export type ProductCenterTableRow = z.infer<typeof productCenterTableSchema>;
+export type ProductCenterTableRow = Pick<
+  SPUSummary,
+  "id" | "spuCode" | "name" | "category" | "skuCount" | "completionPercent" | "updatedAt"
+> & {
+  channels: {
+    douyin: Pick<ChannelPublicationView, "publicationStatus">;
+    wechat: Pick<ChannelPublicationView, "publicationStatus">;
+  };
+};

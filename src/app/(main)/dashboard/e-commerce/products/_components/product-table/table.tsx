@@ -1,17 +1,21 @@
 "use client";
 "use no memo";
 
+import * as React from "react";
+
 import { flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 import { productCenterTableColumns } from "./columns";
-import type { ProductCenterTableRow } from "./schema";
+import { type ProductCenterTableRow, productCenterTableSchema } from "./schema";
 
 export function ProductCenterTable({ data }: { data: ProductCenterTableRow[] }) {
+  const parsedData = React.useMemo(() => productCenterTableSchema.array().parse(data), [data]);
+
   const table = useReactTable({
-    data,
+    data: parsedData,
     columns: productCenterTableColumns,
     getRowId: (row) => row.id,
     getCoreRowModel: getCoreRowModel(),
@@ -28,6 +32,7 @@ export function ProductCenterTable({ data }: { data: ProductCenterTableRow[] }) 
       <CardContent className="flex flex-col gap-4">
         <div className="overflow-hidden rounded-lg border">
           <Table>
+            <TableCaption className="sr-only">产品中心 SPU 列表</TableCaption>
             <TableHeader className="bg-muted/30">
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>

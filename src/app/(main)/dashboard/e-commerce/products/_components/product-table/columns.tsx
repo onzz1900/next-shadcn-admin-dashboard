@@ -64,7 +64,12 @@ export const productCenterTableColumns: ColumnDef<ProductCenterTableRow>[] = [
     header: () => <span className="sr-only">查看详情</span>,
     cell: ({ row }) => (
       <Button asChild variant="ghost" size="sm" className="h-8 px-2">
-        <Link href={`/dashboard/e-commerce/products/${row.original.id}`}>查看详情</Link>
+        <Link
+          href={`/dashboard/e-commerce/products/${row.original.id}`}
+          aria-label={`查看 ${row.original.name}（${row.original.spuCode}）详情`}
+        >
+          查看详情
+        </Link>
       </Button>
     ),
     enableHiding: false,
