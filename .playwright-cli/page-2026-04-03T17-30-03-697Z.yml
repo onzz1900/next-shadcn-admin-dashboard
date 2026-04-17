@@ -1,0 +1,718 @@
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - list:
+              - listitem:
+                - link:
+                  - /url: /dashboard/default
+                  - img
+                  - generic: Studio Admin
+          - generic:
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - button:
+                      - img
+                      - generic: Quick Create
+                    - button:
+                      - img
+                      - generic: Inbox
+            - generic:
+              - generic: Dashboards
+              - generic:
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: /dashboard/default
+                      - img
+                      - generic: Default
+                  - listitem:
+                    - link:
+                      - /url: /dashboard/crm
+                      - img
+                      - generic: CRM
+                  - listitem:
+                    - link:
+                      - /url: /dashboard/finance
+                      - img
+                      - generic: Finance
+                  - listitem:
+                    - link:
+                      - /url: /dashboard/analytics
+                      - img
+                      - generic: Analytics
+                  - listitem:
+                    - button [expanded]:
+                      - img
+                      - generic: E-commerce
+                      - img
+                    - generic:
+                      - list:
+                        - listitem:
+                          - link:
+                            - /url: /dashboard/e-commerce/products
+                            - generic: Product Center
+                        - listitem:
+                          - link:
+                            - /url: /dashboard/e-commerce/publications
+                            - generic: Publication Workbench
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Academy
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Logistics
+                      - generic: Soon
+            - generic:
+              - generic: Pages
+              - generic:
+                - list:
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Email
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Chat
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Calendar
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Kanban
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Invoice
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Users
+                      - generic: Soon
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Roles
+                      - generic: Soon
+                  - listitem:
+                    - button:
+                      - img
+                      - generic: Authentication
+                      - img
+            - generic:
+              - generic: Misc
+              - generic:
+                - list:
+                  - listitem:
+                    - link [disabled]:
+                      - /url: /dashboard/coming-soon
+                      - img
+                      - generic: Others
+                      - generic: Soon
+          - generic:
+            - generic:
+              - generic:
+                - generic: Looking for something more?
+                - generic: Open an issue or do reach out to me.
+            - list:
+              - listitem:
+                - button:
+                  - generic:
+                    - img
+                  - generic:
+                    - generic: Arham Khan
+                    - generic: hello@arhamkhnz.com
+                  - img
+    - main:
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+              - generic: Toggle Sidebar
+            - button:
+              - img
+              - text: Search
+              - generic:
+                - generic: ⌘
+                - text: J
+            - generic:
+              - heading [level=2]: Command Palette
+              - paragraph: Search for a command to run...
+          - generic:
+            - button:
+              - img
+            - button:
+              - img
+            - link:
+              - /url: https://github.com/arhamkhnz/next-shadcn-admin-dashboard
+              - img
+            - generic:
+              - img
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: SPU-COFFEE-001
+                  - generic:
+                    - heading [level=1]: 冷萃挂耳咖啡礼盒
+                    - generic:
+                      - generic: 礼盒
+                      - generic: 短视频主推
+                      - generic: 新品
+                - generic:
+                  - generic:
+                    - generic: 资料完整度
+                    - generic: 100%
+                  - progressbar
+              - generic:
+                - button: 更新渠道
+                - button: 上架
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 基础信息
+                  - generic: 商品主数据与当前主站信息。
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 类目
+                      - generic: 咖啡冲饮
+                    - generic:
+                      - generic: 品牌
+                      - generic: 栖山实验室
+                    - generic:
+                      - generic: 店铺
+                      - generic: 抖音旗舰店
+                    - generic:
+                      - generic: 最后更新
+                      - generic: 2026-04-02 10:20
+                  - generic:
+                    - generic: 商品描述
+                    - paragraph: 适合短视频种草的冷萃挂耳组合装，包含两种风味规格。
+              - generic:
+                - generic:
+                  - generic: 渠道发布
+                  - generic: 查看各渠道审核、上架与字段准备状态，并在视频号渠道中直接维护最小可发品字段。
+                - generic:
+                  - generic:
+                    - tablist:
+                      - tab:
+                        - text: 抖音
+                        - generic:
+                          - generic: 待上架
+                      - tab [selected]:
+                        - text: 视频号
+                        - generic:
+                          - generic: 已齐备
+                    - tabpanel:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: 发布状态
+                            - generic:
+                              - generic: 已齐备
+                          - generic:
+                            - generic: 审核状态
+                            - generic: 未提交
+                          - generic:
+                            - generic: 上下架状态
+                            - generic: 未上架
+                        - generic:
+                          - generic:
+                            - generic: 当前渠道仍有待补字段
+                            - generic: 先补齐字段，再继续后续同步或提交流程。
+                          - link:
+                            - /url: "#channel-wechat-editor"
+                            - text: 继续补字段
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: 缺失字段
+                            - generic: 请先补齐最小发品字段，再提交视频号发品/同步。
+                          - generic: 3 项待补
+                        - generic:
+                          - generic: 主图
+                          - generic: 发货方式
+                          - generic: 七天退货
+                      - generic:
+                        - generic:
+                          - generic: 渠道专属字段
+                          - generic: 按视频号 addProduct 的最小发品要求检查字段，补齐后再提交视频号发品/同步。
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: 外部商品 ID
+                              - generic: WX-001
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 商品标题
+                              - generic: 冷萃挂耳咖啡礼盒
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 短标题
+                              - generic: 冷萃挂耳礼盒
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 类目
+                              - generic: 咖啡 > 挂耳咖啡
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 品牌
+                              - generic: 栖山实验室
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 类目规则摘要
+                              - generic: 一级类目已确认
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 主图
+                            - generic: 缺失
+                          - generic:
+                            - generic:
+                              - generic: 详情图片
+                              - generic: 详情长图
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 详情文案
+                              - generic: 整盒礼赠，适合冷萃场景
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 发货方式
+                            - generic: 缺失
+                          - generic:
+                            - generic:
+                              - generic: 运费模板
+                              - generic: 标准模板
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 重量
+                              - generic: "0.8"
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 参数摘要
+                              - generic: 口味 / 规格已确认
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 资质摘要
+                              - generic: 食品经营许可已备案
+                            - generic: 已配置
+                          - generic:
+                            - generic:
+                              - generic: 七天退货
+                            - generic: 缺失
+                          - generic:
+                            - generic:
+                              - generic: 运费险
+                              - generic: "true"
+                            - generic: 已配置
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: 字段编辑器
+                              - generic: 编辑后需显式保存，详情页状态会基于共享 store 立即刷新。
+                            - button: 保存字段
+                          - alert:
+                            - img
+                            - generic: 最近保存记录
+                            - generic: 最近保存时间：2026-04-02 09:40
+                          - generic:
+                            - generic:
+                              - generic: 发品基础
+                              - generic: 按当前渠道要求维护这组字段。
+                            - generic:
+                              - group:
+                                - generic: 外部商品 ID
+                                - paragraph: 对齐 out_product_id，便于渠道侧幂等关联商品。
+                                - textbox:
+                                  - /placeholder: 输入视频号商品侧的外部商品 ID
+                                  - text: WX-001
+                              - group:
+                                - generic: 商品标题
+                                - paragraph: 对齐 title，用于视频号商品列表展示。
+                                - textbox:
+                                  - /placeholder: 输入商品标题
+                                  - text: 冷萃挂耳咖啡礼盒
+                              - group:
+                                - generic: 短标题
+                                - paragraph: 对齐 short_title，用于发品页和卡片摘要展示。
+                                - textbox:
+                                  - /placeholder: 输入更便于成交的短标题
+                                  - text: 冷萃挂耳礼盒
+                          - generic:
+                            - generic:
+                              - generic: 类目与品牌
+                              - generic: 按当前渠道要求维护这组字段。
+                            - generic:
+                              - group:
+                                - generic: 类目
+                                - paragraph: 对齐 cats_v2，填写渠道侧类目路径。
+                                - textbox:
+                                  - /placeholder: 输入类目路径或类目 ID
+                                  - text: 咖啡 > 挂耳咖啡
+                              - group:
+                                - generic: 品牌
+                                - paragraph: 对齐 brand_id，填写渠道侧品牌标识。
+                                - textbox:
+                                  - /placeholder: 输入品牌 ID
+                                  - text: 栖山实验室
+                              - group:
+                                - generic: 类目规则摘要
+                                - paragraph: 承接类目规则、禁限售或审核说明摘要。
+                                - textbox:
+                                  - /placeholder: 补充类目规则说明
+                                  - text: 一级类目已确认
+                          - generic:
+                            - generic:
+                              - generic: 主图与详情
+                              - generic: 按当前渠道要求维护这组字段。
+                            - generic:
+                              - group:
+                                - generic: 主图
+                                - paragraph: 对齐 head_imgs，选择视频号主图素材。
+                                - button:
+                                  - generic: 选择当前商品素材
+                                  - generic: 未选择
+                              - group:
+                                - generic: 详情图片
+                                - paragraph: 对齐 desc_info.imgs，选择详情内图片素材。
+                                - button:
+                                  - generic: 1 个素材
+                                  - generic: 已选择
+                              - group:
+                                - generic: 详情文案
+                                - paragraph: 对齐 desc_info.desc，用于详情页内容说明。
+                                - textbox:
+                                  - /placeholder: 填写详情文案
+                                  - text: 整盒礼赠，适合冷萃场景
+                          - generic:
+                            - generic:
+                              - generic: 履约与发货
+                              - generic: 按当前渠道要求维护这组字段。
+                            - generic:
+                              - group:
+                                - generic: 发货方式
+                                - paragraph: 对齐 deliver_method，标记视频号侧的发货方式。
+                                - generic:
+                                  - combobox [expanded]:
+                                    - generic: 请选择
+                                    - img
+                                  - combobox
+                              - group:
+                                - generic: 运费模板
+                                - paragraph: 选择对应的履约运费模板。
+                                - generic:
+                                  - combobox:
+                                    - generic: 标准模板
+                                    - img
+                                  - combobox
+                              - group:
+                                - generic: 重量
+                                - paragraph: 对齐重量信息，便于渠道履约计算。
+                                - spinbutton: "0.8"
+                          - generic:
+                            - generic:
+                              - generic: SKU 发售信息
+                              - generic: 按视频号发品要求维护每个 SKU 的价格、库存、缩略图与销售属性。
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic: 经典拼配
+                                    - generic: 商家编码：DRIP-CLASSIC · 当前售价：¥59.00 · 当前库存：182
+                                - generic:
+                                  - group:
+                                    - generic: SKU 编码
+                                    - textbox:
+                                      - /placeholder: 输入渠道 SKU 编码
+                                      - text: DRIP-CLASSIC
+                                  - group:
+                                    - generic: 销售价
+                                    - textbox:
+                                      - /placeholder: 例如 5900
+                                      - text: "5900"
+                                  - group:
+                                    - generic: 库存
+                                    - spinbutton: "182"
+                                  - group:
+                                    - generic: 缩略图
+                                    - paragraph: 只允许从当前商品素材中选取一个可用素材。
+                                    - button:
+                                      - generic: 封面图
+                                      - generic: 封面
+                                  - group:
+                                    - generic: 销售属性
+                                    - paragraph: 逐条维护视频号侧的 SKU 属性文案。
+                                    - generic:
+                                      - generic:
+                                        - textbox:
+                                          - /placeholder: 例如 经典拼配 / 500g
+                                          - text: 经典拼配
+                                        - button:
+                                          - img
+                                          - generic: 删除
+                                      - generic:
+                                        - textbox:
+                                          - /placeholder: 例如 经典拼配 / 500g
+                                          - text: 500g
+                                        - button:
+                                          - img
+                                          - generic: 删除
+                                      - button:
+                                        - img
+                                        - text: 添加属性
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic: 花果拼配
+                                    - generic: 商家编码：DRIP-FRUITY · 当前售价：¥69.00 · 当前库存：96
+                                - generic:
+                                  - group:
+                                    - generic: SKU 编码
+                                    - textbox:
+                                      - /placeholder: 输入渠道 SKU 编码
+                                      - text: DRIP-FRUITY
+                                  - group:
+                                    - generic: 销售价
+                                    - textbox:
+                                      - /placeholder: 例如 5900
+                                      - text: "6900"
+                                  - group:
+                                    - generic: 库存
+                                    - spinbutton: "96"
+                                  - group:
+                                    - generic: 缩略图
+                                    - paragraph: 只允许从当前商品素材中选取一个可用素材。
+                                    - button:
+                                      - generic: 卖点组图
+                                      - generic: 组图
+                                  - group:
+                                    - generic: 销售属性
+                                    - paragraph: 逐条维护视频号侧的 SKU 属性文案。
+                                    - generic:
+                                      - generic:
+                                        - textbox:
+                                          - /placeholder: 例如 经典拼配 / 500g
+                                          - text: 花果拼配
+                                        - button:
+                                          - img
+                                          - generic: 删除
+                                      - generic:
+                                        - textbox:
+                                          - /placeholder: 例如 经典拼配 / 500g
+                                          - text: 500g
+                                        - button:
+                                          - img
+                                          - generic: 删除
+                                      - button:
+                                        - img
+                                        - text: 添加属性
+                          - generic:
+                            - generic:
+                              - generic: 参数 / 资质 / 服务
+                              - generic: 按当前渠道要求维护这组字段。
+                            - generic:
+                              - group:
+                                - generic: 参数摘要
+                                - paragraph: 承接 attrs 的摘要信息。
+                                - textbox:
+                                  - /placeholder: 填写商品参数摘要
+                                  - text: 口味 / 规格已确认
+                              - group:
+                                - generic: 资质摘要
+                                - paragraph: 承接 product_qua_infos 的摘要信息。
+                                - textbox:
+                                  - /placeholder: 填写资质摘要
+                                  - text: 食品经营许可已备案
+                              - group:
+                                - generic: 七天退货
+                                - paragraph: 承接 seven_day_return 服务承诺。
+                                - generic:
+                                  - combobox:
+                                    - generic: 请选择是否开启
+                                    - img
+                                  - combobox
+                                  - generic:
+                                    - button [disabled]: 清空选择
+                              - group:
+                                - generic: 运费险
+                                - paragraph: 承接 freight_insurance 服务承诺。
+                                - generic:
+                                  - combobox:
+                                    - generic: 开启
+                                    - img
+                                  - combobox
+                                  - generic:
+                                    - button: 清空选择
+                      - generic:
+                        - generic:
+                          - generic: 视频号操作
+                          - generic: 最近同步时间：2026-04-02 09:40
+                        - generic:
+                          - button: 更新渠道
+            - generic:
+              - generic:
+                - generic:
+                  - generic: SKU 列表
+                  - generic: 当前 SPU 共 2 个销售规格。
+                - generic:
+                  - generic:
+                    - generic:
+                      - table:
+                        - caption: 商品 SKU 列表
+                        - rowgroup:
+                          - row:
+                            - columnheader: SKU 名称
+                            - columnheader: 商家编码
+                            - columnheader: 售价
+                            - columnheader: 库存
+                        - rowgroup:
+                          - row:
+                            - cell: 经典拼配
+                            - cell: DRIP-CLASSIC
+                            - cell: ¥59.00
+                            - cell: "182"
+                          - row:
+                            - cell: 花果拼配
+                            - cell: DRIP-FRUITY
+                            - cell: ¥69.00
+                            - cell: "96"
+              - generic:
+                - generic:
+                  - generic: 素材预览
+                  - generic: 先看视频号主图与详情图的右侧 mock 预览，再核对真实素材状态。
+                  - generic:
+                    - generic: 视频号预览 Mock
+                    - generic: 视频号缺 3 项
+                    - generic: 最近 09:40
+                  - paragraph: 当前预览对应视频号主图组与详情图组 mock，用于对照 head_imgs / desc_info.imgs。
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 当前仍缺 主图，右侧预览为 mock，不代表真实投放素材。
+                      - link:
+                        - /url: "#channel-wechat-editor"
+                        - text: 去补字段
+                  - generic:
+                    - generic:
+                      - generic: 视频号场景封面
+                      - generic: 更克制的生活方式封面，降低促销感。
+                    - generic:
+                      - img
+                    - generic:
+                      - generic: 视频号场景封面
+                      - generic: 1200 x 900
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 视频号生活方式组图
+                        - generic: 强调饮用场景、桌面氛围和阅读感。
+                      - generic: 3 张
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img
+                          - generic:
+                            - generic: 桌面场景图
+                            - generic: 900 x 900
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img
+                          - generic:
+                            - generic: 风味叙事图
+                            - generic: 900 x 900
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img
+                          - generic:
+                            - generic: 轻送礼图
+                            - generic: 900 x 900
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 视频号详情长图
+                        - generic: 更连续的内容阅读节奏，强调场景和故事感。
+                      - generic: 3 段
+                    - generic:
+                      - generic:
+                        - generic: 详情段 1 · 场景开篇段
+                        - generic:
+                          - img
+                      - generic:
+                        - generic: 详情段 2 · 内容叙事段
+                        - generic:
+                          - img
+                      - generic:
+                        - generic: 详情段 3 · 收束段
+                        - generic:
+                          - img
+                  - generic:
+                    - generic:
+                      - generic: 素材真实状态
+                      - generic: 3/3 已就绪
+                    - generic:
+                      - generic:
+                        - generic: 封面
+                        - generic: 封面图
+                        - generic: 已就绪
+                      - generic:
+                        - generic: 组图
+                        - generic: 卖点组图
+                        - generic: 已就绪
+                      - generic:
+                        - generic: 详情
+                        - generic: 详情长图
+                        - generic: 已就绪
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e619] [cursor=pointer]:
+    - img [ref=e620]
+  - alert
+  - listbox [ref=e656]:
+    - option "快递发货" [active] [ref=e657]:
+      - generic [ref=e658]: 快递发货
+    - option "门店自提" [ref=e659]:
+      - generic [ref=e660]: 门店自提
+    - option "同城配送" [ref=e661]:
+      - generic [ref=e662]: 同城配送

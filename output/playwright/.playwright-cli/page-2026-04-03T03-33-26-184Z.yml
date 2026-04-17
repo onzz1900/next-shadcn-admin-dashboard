@@ -1,0 +1,410 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Studio Admin" [ref=e9] [cursor=pointer]:
+            - /url: /dashboard/default
+            - img [ref=e10]
+            - generic [ref=e12]: Studio Admin
+      - generic [ref=e13]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - button "Quick Create" [ref=e18]:
+              - img [ref=e19]
+              - generic [ref=e21]: Quick Create
+            - button "Inbox" [ref=e22]:
+              - img
+              - generic [ref=e23]: Inbox
+        - generic [ref=e24]:
+          - generic [ref=e25]: Dashboards
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Default" [ref=e29] [cursor=pointer]:
+                - /url: /dashboard/default
+                - img [ref=e30]
+                - generic [ref=e35]: Default
+            - listitem [ref=e36]:
+              - link "CRM" [ref=e37] [cursor=pointer]:
+                - /url: /dashboard/crm
+                - img [ref=e38]
+                - generic [ref=e40]: CRM
+            - listitem [ref=e41]:
+              - link "Finance" [ref=e42] [cursor=pointer]:
+                - /url: /dashboard/finance
+                - img [ref=e43]
+                - generic [ref=e46]: Finance
+            - listitem [ref=e47]:
+              - link "Analytics" [ref=e48] [cursor=pointer]:
+                - /url: /dashboard/analytics
+                - img [ref=e49]
+                - generic [ref=e52]: Analytics
+            - listitem [ref=e53]:
+              - button "E-commerce" [expanded] [ref=e54]:
+                - img [ref=e55]
+                - generic [ref=e58]: E-commerce
+                - img [ref=e59]
+              - list [ref=e62]:
+                - listitem [ref=e63]:
+                  - link "Product Center" [ref=e64] [cursor=pointer]:
+                    - /url: /dashboard/e-commerce/products
+                    - generic [ref=e65]: Product Center
+                - listitem [ref=e66]:
+                  - link "Publication Workbench" [ref=e67] [cursor=pointer]:
+                    - /url: /dashboard/e-commerce/publications
+                    - generic [ref=e68]: Publication Workbench
+            - listitem [ref=e69]:
+              - link "Academy Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Academy
+                - generic: Soon
+            - listitem [ref=e70]:
+              - link "Logistics Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Logistics
+                - generic: Soon
+        - generic [ref=e71]:
+          - generic [ref=e72]: Pages
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - link "Email Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Email
+                - generic: Soon
+            - listitem [ref=e76]:
+              - link "Chat Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Chat
+                - generic: Soon
+            - listitem [ref=e77]:
+              - link "Calendar Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Calendar
+                - generic: Soon
+            - listitem [ref=e78]:
+              - link "Kanban Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Kanban
+                - generic: Soon
+            - listitem [ref=e79]:
+              - link "Invoice Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Invoice
+                - generic: Soon
+            - listitem [ref=e80]:
+              - link "Users Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Users
+                - generic: Soon
+            - listitem [ref=e81]:
+              - link "Roles Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Roles
+                - generic: Soon
+            - listitem [ref=e82]:
+              - button "Authentication" [ref=e83]:
+                - img [ref=e84]
+                - generic [ref=e93]: Authentication
+                - img [ref=e94]
+        - generic [ref=e96]:
+          - generic [ref=e97]: Misc
+          - list [ref=e99]:
+            - listitem [ref=e100]:
+              - link "Others Soon" [disabled]:
+                - /url: /dashboard/coming-soon
+                - img
+                - generic: Others
+                - generic: Soon
+      - generic [ref=e101]:
+        - generic [ref=e103]:
+          - generic [ref=e104]: Looking for something more?
+          - generic [ref=e105]: Open an issue or do reach out to me.
+        - list [ref=e106]:
+          - listitem [ref=e107]:
+            - button "Arham Khan Arham Khan hello@arhamkhnz.com" [ref=e414]:
+              - img "Arham Khan" [ref=e415]
+              - generic [ref=e111]:
+                - generic [ref=e112]: Arham Khan
+                - generic [ref=e113]: hello@arhamkhnz.com
+              - img [ref=e114]
+    - main [ref=e118]:
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - button "Toggle Sidebar" [ref=e122]:
+            - img
+            - generic [ref=e123]: Toggle Sidebar
+          - button "Search ⌘ J" [ref=e124]:
+            - img
+            - text: Search
+            - generic [ref=e125]:
+              - generic [ref=e126]: ⌘
+              - text: J
+          - generic [ref=e127]:
+            - heading "Command Palette" [level=2] [ref=e128]
+            - paragraph [ref=e129]: Search for a command to run...
+        - generic [ref=e130]:
+          - button [ref=e131]:
+            - img
+          - 'button "Current theme: light. Click to cycle themes" [ref=e132]':
+            - img
+          - link "Open GitHub repository" [ref=e133] [cursor=pointer]:
+            - /url: https://github.com/arhamkhnz/next-shadcn-admin-dashboard
+            - img
+          - img "Arham Khan" [ref=e416]
+      - generic [ref=e137]:
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: SPU-COFFEE-001
+              - generic [ref=e143]:
+                - heading "冷萃挂耳咖啡礼盒" [level=1] [ref=e144]
+                - generic [ref=e145]:
+                  - generic [ref=e146]: 礼盒
+                  - generic [ref=e147]: 短视频主推
+                  - generic [ref=e148]: 新品
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - generic [ref=e151]: 资料完整度
+                - generic [ref=e152]: 100%
+              - progressbar [ref=e153]
+          - generic [ref=e155]:
+            - button "更新渠道" [ref=e156]
+            - button "上架" [ref=e157]
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]: 基础信息
+                - generic [ref=e163]: 商品主数据与当前主站信息。
+              - generic [ref=e164]:
+                - generic [ref=e165]:
+                  - generic [ref=e166]:
+                    - generic [ref=e167]: 类目
+                    - generic [ref=e168]: 咖啡冲饮
+                  - generic [ref=e169]:
+                    - generic [ref=e170]: 品牌
+                    - generic [ref=e171]: 栖山实验室
+                  - generic [ref=e172]:
+                    - generic [ref=e173]: 店铺
+                    - generic [ref=e174]: 抖音旗舰店
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: 最后更新
+                    - generic [ref=e177]: 2026-04-02 10:20
+                - generic [ref=e178]:
+                  - generic [ref=e179]: 商品描述
+                  - paragraph [ref=e180]: 适合短视频种草的冷萃挂耳组合装，包含两种风味规格。
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic [ref=e183]: 渠道发布
+                - generic [ref=e184]: 查看各渠道审核、上架与字段准备状态，并直接维护可编辑字段。
+              - generic [ref=e186]:
+                - tablist [ref=e187]:
+                  - tab "抖音 待上架" [ref=e188]:
+                    - text: 抖音
+                    - generic [ref=e189]: 待上架
+                  - tab "视频号 缺失内容" [active] [selected] [ref=e190]:
+                    - text: 视频号
+                    - generic [ref=e191]: 缺失内容
+                - tabpanel "视频号 缺失内容" [ref=e420]:
+                  - generic [ref=e421]:
+                    - generic [ref=e422]:
+                      - generic [ref=e423]: 发布状态
+                      - generic [ref=e424]: 缺失内容
+                    - generic [ref=e425]:
+                      - generic [ref=e426]: 审核状态
+                      - generic [ref=e427]: 未提交
+                    - generic [ref=e428]:
+                      - generic [ref=e429]: 上下架状态
+                      - generic [ref=e430]: 未上架
+                  - generic [ref=e431]:
+                    - generic [ref=e432]:
+                      - generic [ref=e433]:
+                        - generic [ref=e434]: 缺失字段
+                        - generic [ref=e435]: 优先补齐后再同步到渠道。
+                      - generic [ref=e436]: 2 项待补
+                    - generic [ref=e437]:
+                      - generic [ref=e438]: 商品轮播图
+                      - generic [ref=e439]: 运费模板
+                  - generic [ref=e440]:
+                    - generic [ref=e441]:
+                      - generic [ref=e442]: 渠道专属字段
+                      - generic [ref=e443]: 按渠道要求检查专属内容状态。
+                    - generic [ref=e444]:
+                      - generic [ref=e445]:
+                        - generic [ref=e446]:
+                          - generic [ref=e447]: 商品轮播图
+                          - generic [ref=e448]: 缺失
+                        - generic [ref=e449]: 缺失
+                      - generic [ref=e450]:
+                        - generic [ref=e451]:
+                          - generic [ref=e452]: 运费模板
+                          - generic [ref=e453]: 未选择
+                        - generic [ref=e454]: 缺失
+                  - generic [ref=e455]:
+                    - generic [ref=e456]:
+                      - generic [ref=e457]:
+                        - generic [ref=e458]: 字段编辑器
+                        - generic [ref=e459]: 编辑后需显式保存，详情页状态会基于共享 store 立即刷新。
+                      - button "保存字段" [ref=e460]
+                    - alert [ref=e461]:
+                      - img [ref=e462]
+                      - generic [ref=e465]: 最近保存记录
+                      - generic [ref=e466]: 最近保存时间：2026-04-02 09:40
+                    - generic [ref=e467]:
+                      - generic [ref=e468]:
+                        - generic [ref=e469]: 基础信息
+                        - generic [ref=e470]: 按当前渠道要求维护这组字段。
+                      - group [ref=e472]:
+                        - generic [ref=e473]: 商品轮播图
+                        - paragraph [ref=e474]: 从当前商品素材中选择视频号轮播图素材。
+                        - button "选择当前商品素材 未选择" [ref=e475]:
+                          - generic [ref=e476]: 选择当前商品素材
+                          - generic [ref=e477]: 未选择
+                    - generic [ref=e478]:
+                      - generic [ref=e479]:
+                        - generic [ref=e480]: 物流履约
+                        - generic [ref=e481]: 按当前渠道要求维护这组字段。
+                      - group [ref=e483]:
+                        - generic [ref=e484]: 运费模板
+                        - paragraph [ref=e485]: 选择对应的履约运费模板。
+                        - generic [ref=e486]:
+                          - combobox [ref=e487]:
+                            - img
+                          - combobox [ref=e488]
+                    - generic [ref=e489]:
+                      - generic [ref=e490]:
+                        - generic [ref=e491]: 内容表达
+                        - generic [ref=e492]: 按当前渠道要求维护这组字段。
+                      - group [ref=e494]:
+                        - generic [ref=e495]: 卖点亮点
+                        - paragraph [ref=e496]: 视频号详情页展示的卖点短句。
+                        - generic [ref=e497]:
+                          - generic [ref=e498]: 还没有添加条目。
+                          - button "添加条目" [ref=e499]:
+                            - img
+                            - text: 添加条目
+                    - generic [ref=e500]:
+                      - generic [ref=e501]:
+                        - generic [ref=e502]: 亮点强化
+                        - generic [ref=e503]: 按当前渠道要求维护这组字段。
+                      - group [ref=e505]:
+                        - generic [ref=e506]: 服务承诺
+                        - paragraph [ref=e507]: 补充售后和履约服务承诺。
+                        - generic [ref=e508]:
+                          - combobox [ref=e509]:
+                            - generic: 请选择
+                            - img
+                          - combobox [ref=e510]
+                          - generic [ref=e511]:
+                            - button "清空选择" [disabled]
+                  - generic [ref=e512]:
+                    - generic [ref=e513]:
+                      - generic [ref=e514]: 视频号操作
+                      - generic [ref=e515]: 最近同步时间：2026-04-02 09:40
+                    - button "更新渠道" [ref=e517]
+          - generic [ref=e298]:
+            - generic [ref=e299]:
+              - generic [ref=e300]:
+                - generic [ref=e301]: SKU 列表
+                - generic [ref=e302]: 当前 SPU 共 2 个销售规格。
+              - table "商品 SKU 列表" [ref=e306]:
+                - caption [ref=e307]: 商品 SKU 列表
+                - rowgroup [ref=e308]:
+                  - row "SKU 名称 商家编码 售价 库存" [ref=e309]:
+                    - columnheader "SKU 名称" [ref=e310]
+                    - columnheader "商家编码" [ref=e311]
+                    - columnheader "售价" [ref=e312]
+                    - columnheader "库存" [ref=e313]
+                - rowgroup [ref=e314]:
+                  - row "经典拼配 DRIP-CLASSIC ¥59.00 182" [ref=e315]:
+                    - cell "经典拼配" [ref=e316]
+                    - cell "DRIP-CLASSIC" [ref=e317]
+                    - cell "¥59.00" [ref=e318]
+                    - cell "182" [ref=e319]
+                  - row "花果拼配 DRIP-FRUITY ¥69.00 96" [ref=e320]:
+                    - cell "花果拼配" [ref=e321]
+                    - cell "DRIP-FRUITY" [ref=e322]
+                    - cell "¥69.00" [ref=e323]
+                    - cell "96" [ref=e324]
+            - generic [ref=e325]:
+              - generic [ref=e326]:
+                - generic [ref=e327]: 素材预览
+                - generic [ref=e328]: 先看封面主视觉，再看卖点组图和详情长图的右侧 mock 预览节奏。
+                - generic [ref=e330]: 视频号预览 Mock
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - generic [ref=e333]:
+                    - generic [ref=e334]: 视频号场景封面
+                    - generic [ref=e335]: 更克制的生活方式封面，降低促销感。
+                  - img "视频号场景封面" [ref=e518]
+                  - generic [ref=e338]:
+                    - generic [ref=e339]: 视频号场景封面
+                    - generic [ref=e340]: 1200 x 900
+                - generic [ref=e341]:
+                  - generic [ref=e342]:
+                    - generic [ref=e343]:
+                      - generic [ref=e344]: 视频号生活方式组图
+                      - generic [ref=e345]: 强调饮用场景、桌面氛围和阅读感。
+                    - generic [ref=e346]: 3 张
+                  - generic [ref=e347]:
+                    - generic [ref=e520]:
+                      - img "桌面场景图" [ref=e522]
+                      - generic [ref=e523]:
+                        - generic [ref=e524]: 桌面场景图
+                        - generic [ref=e525]: 900 x 900
+                    - generic [ref=e527]:
+                      - img "风味叙事图" [ref=e529]
+                      - generic [ref=e530]:
+                        - generic [ref=e531]: 风味叙事图
+                        - generic [ref=e532]: 900 x 900
+                    - generic [ref=e534]:
+                      - img "轻送礼图" [ref=e536]
+                      - generic [ref=e537]:
+                        - generic [ref=e538]: 轻送礼图
+                        - generic [ref=e539]: 900 x 900
+                - generic [ref=e369]:
+                  - generic [ref=e370]:
+                    - generic [ref=e371]:
+                      - generic [ref=e372]: 视频号详情长图
+                      - generic [ref=e373]: 更连续的内容阅读节奏，强调场景和故事感。
+                    - generic [ref=e374]: 3 段
+                  - generic [ref=e375]:
+                    - generic [ref=e540]:
+                      - generic [ref=e541]: 详情段 1 · 场景开篇段
+                      - img "场景开篇段" [ref=e543]
+                    - generic [ref=e544]:
+                      - generic [ref=e545]: 详情段 2 · 内容叙事段
+                      - img "内容叙事段" [ref=e547]
+                    - generic [ref=e548]:
+                      - generic [ref=e549]: 详情段 3 · 收束段
+                      - img "收束段" [ref=e551]
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: 素材真实状态
+                    - generic [ref=e391]: 3/3 已就绪
+                  - generic [ref=e392]:
+                    - generic [ref=e393]:
+                      - generic [ref=e394]: 封面
+                      - generic [ref=e395]: 封面图
+                      - generic [ref=e396]: 已就绪
+                    - generic [ref=e397]:
+                      - generic [ref=e398]: 组图
+                      - generic [ref=e399]: 卖点组图
+                      - generic [ref=e400]: 已就绪
+                    - generic [ref=e401]:
+                      - generic [ref=e402]: 详情
+                      - generic [ref=e403]: 详情长图
+                      - generic [ref=e404]: 已就绪
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e410] [cursor=pointer]:
+    - img [ref=e411]
+  - alert [ref=e419]

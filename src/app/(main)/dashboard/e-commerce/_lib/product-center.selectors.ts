@@ -60,6 +60,9 @@ function selectWorkbenchChannels(product: SPUDetail): Array<PublicationWorkbench
       channel: channel.channel,
       publicationStatus: channel.publicationStatus,
       auditStatus: channel.auditStatus,
+      listingStatus: channel.listingStatus,
+      missingFields: channel.missingFields,
+      rejectionReason: channel.rejectionReason,
       blocker: channel.missingFields[0] ?? channel.rejectionReason ?? "等待渠道处理",
       updatedAt: channel.lastSyncAt,
     }));

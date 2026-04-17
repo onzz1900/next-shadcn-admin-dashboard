@@ -1,17 +1,16 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 import type { SPUDetail } from "../../../_lib/product-center.types";
-import { getHeaderActions } from "./publication-actions";
 
 interface DetailHeaderProps {
   product: SPUDetail;
 }
 
 export function DetailHeader({ product }: DetailHeaderProps) {
-  const actions = getHeaderActions(product);
-
   return (
     <section className="rounded-xl border bg-card p-6 shadow-xs">
       <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
@@ -37,12 +36,15 @@ export function DetailHeader({ product }: DetailHeaderProps) {
             <Progress value={product.completionPercent} className="h-2" />
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 xl:justify-end">
-          {actions.map((action, index) => (
-            <Button key={action} variant={index === 0 && actions.length > 1 ? "outline" : "default"}>
-              {action}
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-2 xl:justify-end">
+            <Button asChild>
+              <Link href={`/dashboard/e-commerce/products/${product.id}/publish`}>进入发布页</Link>
             </Button>
-          ))}
+          </div>
+          <p className="max-w-sm text-muted-foreground text-xs leading-5 xl:ml-auto xl:text-right">
+            主要发布动作请前往发布页，当前页保留过渡期快捷操作。
+          </p>
         </div>
       </div>
     </section>

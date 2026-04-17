@@ -15,6 +15,10 @@ const publicationStatusSchema = z.enum([
 
 const productCenterTableChannelSchema = z.object({
   publicationStatus: publicationStatusSchema,
+  auditStatus: z.enum(["not_submitted", "pending", "approved", "rejected"]),
+  listingStatus: z.enum(["not_listed", "listed", "delisted"]),
+  missingFields: z.array(z.string()),
+  rejectionReason: z.string().optional(),
 });
 
 export const productCenterTableSchema = z.object({
@@ -36,7 +40,13 @@ export type ProductCenterTableRow = Pick<
   "id" | "spuCode" | "name" | "category" | "skuCount" | "completionPercent" | "updatedAt"
 > & {
   channels: {
-    douyin: Pick<ChannelPublicationView, "publicationStatus">;
-    wechat: Pick<ChannelPublicationView, "publicationStatus">;
+    douyin: Pick<
+      ChannelPublicationView,
+      "publicationStatus" | "auditStatus" | "listingStatus" | "missingFields" | "rejectionReason"
+    >;
+    wechat: Pick<
+      ChannelPublicationView,
+      "publicationStatus" | "auditStatus" | "listingStatus" | "missingFields" | "rejectionReason"
+    >;
   };
 };

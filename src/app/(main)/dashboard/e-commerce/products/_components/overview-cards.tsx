@@ -10,27 +10,26 @@ const metricCards = [
   {
     key: "totalProducts",
     title: "商品总数",
-    description: "当前中心内的 SPU 数量",
+    description: "当前商品中心内的 SPU 商品数",
   },
   {
     key: "missingContent",
-    title: "待补内容",
-    description: "内容完成度未达 100%",
+    title: "主档待补",
+    description: "主档内容完成度未达 100% 的商品",
   },
   {
     key: "readyToPublish",
-    title: "可发布",
-    description: "至少一个渠道可直接上架",
+    title: "待上架商品",
+    description: "至少一个渠道已齐备并可直接上架的商品",
   },
   {
     key: "inReview",
-    title: "审核中",
-    description: "有渠道处于待审核状态",
+    description: "至少一个渠道处于待审核状态的商品",
   },
   {
     key: "syncErrors",
-    title: "同步异常",
-    description: "有渠道发生同步失败",
+    title: "异常商品",
+    description: "至少一个渠道发生同步失败的商品",
   },
 ] as const;
 

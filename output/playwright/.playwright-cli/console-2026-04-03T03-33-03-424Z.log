@@ -1,0 +1,51 @@
+[    1060ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[    1190ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  925957ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  926916ms] [LOG] [Fast Refresh] done in 766ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  929963ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  930226ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx:33:1
+'import', and 'export' cannot be used outside of module code
+  31 |
+  32 | export function AssetsCard({ productId, channelId, assets }: AssetsCardProps) {
+> 33 | export function AssetsCard({ productId, channelId, assets, statusStrip }: AssetsCardProps) {
+     | ^^^^^^
+  34 |   const preview = getProductAssetPreview(productId, channelId);
+  35 |   const readyCount = assets.filter((asset) => asset.status === "ready").length;
+  36 |   const missingCount = assets.length - readyCount;
+
+Parsing ecmascript source code failed
+
+Generated code of loaders [next/dist/build/babel/loader] transform of file content of next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx:
+./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx:33:1
+  31 |
+  32 | export function AssetsCard({ productId, channelId, assets }: AssetsCardProps) {
+> 33 | export function AssetsCard({ productId, channelId, assets, statusStrip }: AssetsCardProps) {
+     | ^^^^^^
+  34 |   const preview = getProductAssetPreview(productId, channelId);
+  35 |   const readyCount = assets.filter((asset) => asset.status === "ready").length;
+  36 |   const missingCount = assets.length - readyCount;
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component] @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[  935593ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  935976ms] [LOG] [Fast Refresh] done in 475ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  936108ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  936165ms] [LOG] [Fast Refresh] done in 157ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  961059ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  961352ms] [LOG] [Fast Refresh] done in 183ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  963660ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  963717ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 1166035ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 1166605ms] [LOG] [Fast Refresh] done in 684ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 1177113ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 1177842ms] [LOG] [Fast Refresh] done in 839ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431

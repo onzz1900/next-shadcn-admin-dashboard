@@ -47,12 +47,12 @@ export const productCenterTableColumns: ColumnDef<ProductCenterTableRow>[] = [
   {
     id: "douyinStatus",
     header: "抖音状态",
-    cell: ({ row }) => <ChannelStatusBadge status={row.original.channels.douyin.publicationStatus} />,
+    cell: ({ row }) => <ChannelStatusBadge channelState={row.original.channels.douyin} showInlineNote />,
   },
   {
     id: "wechatStatus",
     header: "视频号状态",
-    cell: ({ row }) => <ChannelStatusBadge status={row.original.channels.wechat.publicationStatus} />,
+    cell: ({ row }) => <ChannelStatusBadge channelState={row.original.channels.wechat} showInlineNote />,
   },
   {
     accessorKey: "updatedAt",

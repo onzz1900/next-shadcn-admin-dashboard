@@ -34,7 +34,17 @@ export const publicationWorkbenchTableColumns: ColumnDef<PublicationWorkbenchTab
   {
     accessorKey: "publicationStatus",
     header: "状态",
-    cell: ({ row }) => <ChannelStatusBadge status={row.original.publicationStatus} />,
+    cell: ({ row }) => (
+      <ChannelStatusBadge
+        channelState={{
+          publicationStatus: row.original.publicationStatus,
+          auditStatus: row.original.auditStatus,
+          listingStatus: row.original.listingStatus,
+          missingFields: row.original.missingFields,
+          rejectionReason: row.original.rejectionReason,
+        }}
+      />
+    ),
   },
   {
     accessorKey: "blocker",

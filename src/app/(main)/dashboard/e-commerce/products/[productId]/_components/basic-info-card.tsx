@@ -34,7 +34,7 @@ export function BasicInfoCard({ product }: BasicInfoCardProps) {
         </div>
         <div className="space-y-2">
           <div className="text-muted-foreground text-xs">商品描述</div>
-          <p className="leading-6 text-sm">{product.description}</p>
+          <p className="text-sm leading-6">{product.description}</p>
         </div>
       </CardContent>
     </Card>

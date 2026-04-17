@@ -3,14 +3,11 @@
 import * as React from "react";
 
 import { filterProductSummaries, getProductCenterMetrics } from "../../_lib/product-center.selectors";
-import type { ProductCenterFilters, SPUDetail } from "../../_lib/product-center.types";
+import type { ProductCenterFilters } from "../../_lib/product-center.types";
+import { useProductCenterStore } from "../../_state/product-center-provider";
 import { ProductCenterFiltersBar } from "./filters";
 import { ProductCenterOverviewCards } from "./overview-cards";
 import { ProductCenterTable } from "./product-table/table";
-
-interface ProductCenterPageProps {
-  products: SPUDetail[];
-}
 
 const initialFilters: ProductCenterFilters = {
   search: "",
@@ -19,14 +16,15 @@ const initialFilters: ProductCenterFilters = {
   channelState: "all",
 };
 
-export function ProductCenterPage({ products }: ProductCenterPageProps) {
+export function ProductCenterPage() {
   const [filters, setFilters] = React.useState<ProductCenterFilters>(initialFilters);
   const deferredFilters = React.useDeferredValue(filters);
+  const products = useProductCenterStore((store) => store.products);
 
   const metrics = React.useMemo(() => getProductCenterMetrics(products), [products]);
   const filteredProducts = React.useMemo(
     () => filterProductSummaries(products, deferredFilters),
-    [products, deferredFilters],
+    [deferredFilters, products],
   );
 
   return (

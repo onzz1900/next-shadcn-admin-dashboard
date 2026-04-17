@@ -43,7 +43,7 @@ export function ProductCenterFiltersBar({ filters, onFiltersChange }: ProductCen
     <Card>
       <CardHeader className="space-y-1">
         <CardTitle>筛选商品</CardTitle>
-        <CardDescription>按商品状态、渠道和渠道发布状态快速缩小范围。</CardDescription>
+        <CardDescription>按商品状态、抖音和视频号的渠道发布状态快速缩小范围。</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-3 md:grid-cols-4">
         <div className="relative md:col-span-1">

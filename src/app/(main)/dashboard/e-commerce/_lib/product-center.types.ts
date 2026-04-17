@@ -13,6 +13,7 @@ export type AuditStatus = "not_submitted" | "pending" | "approved" | "rejected";
 export type ListingStatus = "not_listed" | "listed" | "delisted";
 
 export interface ChannelFieldState {
+  fieldId?: string;
   label: string;
   value: string;
   state: "ready" | "missing" | "warning";
@@ -33,12 +34,24 @@ export type ChannelMap = {
   [K in ChannelId]: ChannelPublicationView<K>;
 };
 
+export interface WechatSkuPublishing {
+  skuId: string;
+  skuCode: string;
+  salePrice: string;
+  stockNum: number;
+  thumbImg: string;
+  skuAttrs: string[];
+}
+
 export interface SKUItem {
   id: string;
   name: string;
   sellerSku: string;
   priceLabel: string;
   inventory: number;
+  channelPublishing?: {
+    wechat?: WechatSkuPublishing;
+  };
 }
 
 export interface AssetItem {
@@ -90,6 +103,9 @@ export interface PublicationWorkbenchRow {
   channel: ChannelId;
   publicationStatus: PublicationStatus;
   auditStatus: AuditStatus;
+  listingStatus: ListingStatus;
+  missingFields: string[];
+  rejectionReason?: string;
   blocker: string;
   updatedAt: string;
 }

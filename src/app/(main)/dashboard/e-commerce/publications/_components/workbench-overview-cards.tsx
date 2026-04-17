@@ -10,27 +10,27 @@ const overviewCards = [
   {
     key: "in_review",
     title: "审核中",
-    description: "等待渠道审核的任务",
+    description: "字段已保存，等待渠道审核的任务",
   },
   {
     key: "missing_fields",
     title: "待补字段",
-    description: "仍需补齐必填信息",
+    description: "保存字段后仍未补齐的任务",
   },
   {
     key: "sync_error",
     title: "同步异常",
-    description: "渠道同步失败或中断",
+    description: "字段已保存，但渠道同步仍失败",
   },
   {
     key: "ready_to_list",
     title: "待上架",
-    description: "内容已齐，等待发布",
+    description: "字段已齐备，等待进一步动作",
   },
   {
     key: "rejected",
     title: "已驳回",
-    description: "渠道驳回后等待重新处理",
+    description: "已被渠道驳回，等待重新处理",
   },
 ] as const;
 
@@ -46,7 +46,7 @@ export function WorkbenchOverviewCards({ rows }: WorkbenchOverviewCardsProps) {
               <CardDescription>{card.title}</CardDescription>
               <CardTitle className="text-2xl tabular-nums">{count}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-muted-foreground">{card.description}</CardContent>
+            <CardContent className="pt-0 text-muted-foreground text-sm">{card.description}</CardContent>
           </Card>
         );
       })}

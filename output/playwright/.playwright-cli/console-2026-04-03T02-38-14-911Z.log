@@ -1,0 +1,287 @@
+[    3370ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[    3626ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[    3767ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[    3981ms] [LOG] [Fast Refresh] done in 327ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  681594ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  682174ms] [LOG] [Fast Refresh] done in 695ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  839645ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  839803ms] [LOG] [Fast Refresh] done in 264ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  848532ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[  848577ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2437733ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2438303ms] [LOG] [Fast Refresh] done in 682ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2452509ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2452578ms] [LOG] [Fast Refresh] done in 171ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2454708ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2456233ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[ 2456404ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[ 2456506ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2456528ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[ 2456537ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/dashboard/e-commerce/products/spu-hanger-coffee?_rsc=18rzl:0
+[ 2456644ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/dashboard/e-commerce/products/spu-hanger-coffee?_rsc=18rzl:0
+[ 2456661ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2456699ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[ 2456816ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/dashboard/e-commerce/products/spu-hanger-coffee:0
+[ 2457531ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/0074_react-dom_0fdl~0b._.js:15305
+[ 2457620ms] Error: ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/taojialiang/Desktop/projects/pim/next-shadcn-admin-dashboard/node_modules/.pnpm/next@16.2.2_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/taojialiang/Desktop/projects/pim/next-shadcn-admin-dashboard/node_modules/.pnpm/next@16.2.2_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/taojialiang/Desktop/projects/pim/next-shadcn-admin-dashboard/node_modules/.pnpm/next@16.2.2_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/taojialiang/Desktop/projects/pim/next-shadcn-admin-dashboard/node_modules/.pnpm/next@16.2.2_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/taojialiang/Desktop/projects/pim/next-shadcn-admin-dashboard/node_modules/.pnpm/next@16.2.2_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/base-server.js:1745:26)
+[ 2457613ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2457689ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1945
+[ 2457702ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1945
+[ 2457734ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1945
+[ 2457836ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2458129ms] [ERROR] ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts:1:1
+Module not found: Can't resolve './product-asset-preview.mock'
+> 1 | import { productAssetPreviewMock } from "./product-asset-preview.mock";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import type { ProductAssetPreview } from "./product-asset-preview.types";
+  3 |
+  4 | export function getProductAssetPreview(productId: string): ProductAssetPreview | undefined {
+
+Import traces:
+  Client Component Browser:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component Browser]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/_lib/product-asset-preview.ts [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/assets-card.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Client Component SSR]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/_components/product-detail-page.tsx [Server Component]
+    ./next-shadcn-admin-dashboard/src/app/(main)/dashboard/e-commerce/products/[productId]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1945
+[ 2473011ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2473325ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2473333ms] [LOG] [Fast Refresh] done in 414ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2473460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2474223ms] [LOG] [Fast Refresh] done in 865ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ocm1_m._.js:1226
+[ 2475293ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/dashboard/e-commerce/products/spu-hanger-coffee:0
+[ 2475346ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475384ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475405ms] [ERROR] Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template). @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:3272
+[ 2475586ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475797ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475906ms] TypeError: Cannot read properties of undefined (reading 'title')
+    at AssetPreviewCover (http://localhost:3001/_next/static/chunks/next-shadcn-admin-dashboard_src_0ln__xv._.js:608:24)
+    at Object.react_stack_bottom_frame (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:15037:24)
+    at renderWithHooks (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:4620:24)
+    at updateFunctionComponent (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:6081:21)
+    at beginWork (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:6691:24)
+    at runWithFiberInDEV (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:965:74)
+    at performUnitOfWork (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:9555:97)
+    at workLoopSync (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:9449:40)
+    at renderRootSync (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_react-dom_0~dbxtn._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3001/_next/static/chunks/0_yo_next_dist_compiled_0s0970e._.js:2647:64)
+[ 2475805ms] [LOG] [Fast Refresh] done in 359ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475959ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2475995ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2476085ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2476199ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2595464ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 2595549ms] [LOG] [Fast Refresh] done in 192ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3077725ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3079062ms] [LOG] [Fast Refresh] done in 1197ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3128745ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3129060ms] [LOG] [Fast Refresh] done in 423ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3151806ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
+[ 3152036ms] [LOG] [Fast Refresh] done in 287ms @ http://localhost:3001/_next/static/chunks/0_yo_next_dist_0ye7_fx._.js:2431
